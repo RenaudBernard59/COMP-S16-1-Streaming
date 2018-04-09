@@ -6,6 +6,7 @@
 package streaming.entity;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -37,8 +38,10 @@ public class Lien implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Enumerated(EnumType.STRING)
+    @Column(length = 10)
     private Version version;
     @Enumerated(EnumType.STRING)
+    @Column(length = 10)
     private Qualite qualite;
     private String lien;
     

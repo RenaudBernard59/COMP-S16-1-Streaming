@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import javax.persistence.Persistence;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -14,7 +15,7 @@ import static org.junit.Assert.*;
 public class NewEmptyJUnitTest {
     
     @Test
-    public NewEmptyJUnitTest() {
+    public void bouzah() {
      Persistence.createEntityManagerFactory("ptitTestPU");
     }
     

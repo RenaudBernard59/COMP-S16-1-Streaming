@@ -22,7 +22,13 @@ public class Lien implements Serializable {
         VO,
         VOSTFR
     }
-    
+    public enum Qualite {
+        BD,
+        SD,
+        HD720,
+        HD1080,
+        UHD
+    }
     
     private static final long serialVersionUID = 1L;
     @Id
@@ -30,7 +36,7 @@ public class Lien implements Serializable {
     private Long id;
 
     private Version version;
-    private String qualite;
+    private Qualite qualite;
     private String lien;
     
     

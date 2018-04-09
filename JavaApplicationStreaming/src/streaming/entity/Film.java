@@ -27,6 +27,8 @@ public class Film implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(nullable = false, length = 32, unique = true)
+    private String titre;   
     @Column(name = "Description", length = 10000)
     private String synopsis;
     @Temporal(javax.persistence.TemporalType.DATE)

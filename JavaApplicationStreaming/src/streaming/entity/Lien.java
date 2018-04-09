@@ -17,13 +17,19 @@ import javax.persistence.Id;
  */
 @Entity
 public class Lien implements Serializable {
-
+    public enum Version {
+        VF,
+        VO,
+        VOSTFR
+    }
+    
+    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String Version;
+    private Version version;
     private String qualite;
     private String lien;
     

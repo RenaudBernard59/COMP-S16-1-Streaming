@@ -38,11 +38,12 @@ public class Lien implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Enumerated(EnumType.STRING)
-    @Column(length = 10)
+    @Column(length = 16)
     private Version version;
     @Enumerated(EnumType.STRING)
-    @Column(length = 10)
+    @Column(length = 16)
     private Qualite qualite;
+    @Column(nullable = false)
     private String lien;
     
     

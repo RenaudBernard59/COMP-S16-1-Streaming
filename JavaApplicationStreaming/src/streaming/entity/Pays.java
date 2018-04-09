@@ -22,7 +22,7 @@ public class Pays implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    private String pays;
     public Long getId() {
         return id;
     }

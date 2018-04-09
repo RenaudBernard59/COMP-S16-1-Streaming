@@ -6,6 +6,7 @@
 package streaming.entity;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +23,11 @@ public class Serie implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    @Column(length = 32, nullable = false)
+    private String titre;
+    @Column(name = "Description", length = 4000)
+    private String synopsis;
+    private Long paysSerie;
     public Long getId() {
         return id;
     }

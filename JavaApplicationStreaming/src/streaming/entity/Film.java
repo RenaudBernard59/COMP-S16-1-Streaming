@@ -29,11 +29,14 @@ public class Film implements Serializable {
     private Long id;
     @Column(nullable = false, length = 32, unique = true)
     private String titre;   
-    @Column(name = "Description", length = 10000)
+    @Column(name = "Description", length = 4000)
     private String synopsis;
     @Temporal(javax.persistence.TemporalType.DATE)
+    @Column(length = 4)
     private Date dateSortie;
-    
+    private Long lienFilm;
+    private Long PaysFilm;
+    private Long PersonnesFilm;
     
     public Long getId() {
         return id;

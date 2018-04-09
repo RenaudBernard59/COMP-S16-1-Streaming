@@ -22,7 +22,9 @@ public class Genre implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    private String genre;
+    
+    
     public Long getId() {
         return id;
     }

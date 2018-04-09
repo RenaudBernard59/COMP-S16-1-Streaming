@@ -6,10 +6,13 @@
 package streaming.entity;
 
 import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
 
 /**
  *
@@ -22,7 +25,16 @@ public class Episode implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    @Column(length = 50)
+    private String nomEpisode;
+    @Column(nullable = false)
+    private int numEpisode;
+    @Temporal(javax.persistence.TemporalType.DATE)
+    @Column(length = 4)
+    private Date dateEpisode;
+    private Long lienEpisode;
+    private Long personnesEpisodeSerie;
+    
     public Long getId() {
         return id;
     }

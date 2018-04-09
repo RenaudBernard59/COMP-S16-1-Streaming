@@ -31,6 +31,54 @@ public class Film implements Serializable {
     private String titre;   
     @Column(name = "Description", length = 4000)
     private String synopsis;
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
+    }
+
+    public Date getDateSortie() {
+        return dateSortie;
+    }
+
+    public void setDateSortie(Date dateSortie) {
+        this.dateSortie = dateSortie;
+    }
+
+    public Long getLienFilm() {
+        return lienFilm;
+    }
+
+    public void setLienFilm(Long lienFilm) {
+        this.lienFilm = lienFilm;
+    }
+
+    public Long getPaysFilm() {
+        return PaysFilm;
+    }
+
+    public void setPaysFilm(Long PaysFilm) {
+        this.PaysFilm = PaysFilm;
+    }
+
+    public Long getPersonnesFilm() {
+        return PersonnesFilm;
+    }
+
+    public void setPersonnesFilm(Long PersonnesFilm) {
+        this.PersonnesFilm = PersonnesFilm;
+    }
     @Temporal(javax.persistence.TemporalType.DATE)
     @Column(length = 4)
     private Date dateSortie;

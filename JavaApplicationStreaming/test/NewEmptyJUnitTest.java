@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 
+import java.util.Date;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import streaming.entity.Film;
 
 /**
  *
@@ -14,11 +17,19 @@ import static org.junit.Assert.*;
  */
 public class NewEmptyJUnitTest {
     
+        //Persistence.createEntityManagerFactory("PU");
     @Test
     public void demarre() {
-        Persistence.createEntityManagerFactory("PU");
         
+        EntityManagerFactory f = Persistence.createEntityManagerFactory("PU");
+        EntityManager em = f.createEntityManager();
+        em.getTransaction().begin();
+        Film film = new Film();
+        film.setTitre("Transpotting");
+        film.setDateSortie(new Date());
+        em.persist(film);
         
+        em.getTransaction().commit();
     }
     
 }

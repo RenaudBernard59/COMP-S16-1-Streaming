@@ -23,6 +23,11 @@ public class Lien implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String Version;
+    private String qualite;
+    private String lien;
+    
+    
     public Long getId() {
         return id;
     }

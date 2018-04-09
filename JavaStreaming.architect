@@ -10,6 +10,166 @@
  <source-databases>
  </source-databases>
  <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="d2ee9a27-1a13-43b4-98e0-fdccab15bd12" name="Film" objectType="TABLE" physicalName="Film" >
+   <remarks></remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="b3273938-11f0-4e49-9df1-a64ff498eed8" autoIncrement="false" autoIncrementSequenceName="Film_synopsis_seq" defaultValue="" name="synopsis" nullable="0" physicalName="synopsis" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="2e6618a2-4330-42a1-a08b-981958696bde" autoIncrement="false" autoIncrementSequenceName="Film_dateSortie_seq" defaultValue="" name="dateSortie" nullable="0" physicalName="dateSortie" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX4" populated="true" UUID="a59e4884-af2a-4f44-b69e-2a28a886e6de" clustered="false" name="Film_PK" physicalName="Film_PK" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB5" populated="true" UUID="34b02680-ea4f-44df-8bd1-96c8d2e4da54" name="Genre" objectType="TABLE" physicalName="Genre" >
+   <remarks></remarks>
+   <folder id="FOLTAB51" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL6" populated="true" UUID="8d053240-9e19-407b-bc82-3f64115b9da1" autoIncrement="false" autoIncrementSequenceName="Genre_genre_seq" defaultValue="" name="genre" nullable="0" physicalName="genre" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB53" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB52" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB54" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX7" populated="true" UUID="a57f7913-5617-4562-af6b-ddee2d9dacd7" clustered="false" name="Genre_PK" physicalName="Genre_PK" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB8" populated="true" UUID="0c0fd07e-8437-44a1-9a47-b7a0bdd62d82" name="Personne" objectType="TABLE" physicalName="Personne" >
+   <remarks></remarks>
+   <folder id="FOLTAB81" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL9" populated="true" UUID="1c7ea8bb-037c-4f72-a4eb-988f9ce188e7" autoIncrement="false" autoIncrementSequenceName="Personne_nom_seq" defaultValue="" name="nom" nullable="0" physicalName="nom" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL10" populated="true" UUID="daac6a7a-23e7-4b73-a280-079c0a6b5aa6" autoIncrement="false" autoIncrementSequenceName="Personne_prenom_seq" defaultValue="" name="prenom" nullable="0" physicalName="prenom" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB82" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB84" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX11" populated="true" UUID="30213685-9e16-4260-bc60-aef7853ae303" clustered="false" name="Personne_PK" physicalName="Personne_PK" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB12" populated="true" UUID="4d9a92c4-a25c-448e-b19b-f3bb05790946" name="Lien" objectType="TABLE" physicalName="Lien" >
+   <remarks></remarks>
+   <folder id="FOLTAB121" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL13" populated="true" UUID="3eb1cd23-ee53-44ae-9b50-3d6a6bc184fc" autoIncrement="false" autoIncrementSequenceName="Lien_version_seq" defaultValue="" name="version" nullable="0" physicalName="version" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL14" populated="true" UUID="07bfacdb-a1ae-4a20-b479-ad1744c79bb1" autoIncrement="false" autoIncrementSequenceName="Lien_qualite_seq" defaultValue="" name="qualite" nullable="0" physicalName="qualite" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB123" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB122" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB124" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX15" populated="true" UUID="9739acc9-5f7f-47fe-b43c-63a39cfbe5db" clustered="false" name="Lien_PK" physicalName="Lien_PK" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB16" populated="true" UUID="a428edd0-992a-4bae-9174-746084a4d163" name="Qualite" objectType="TABLE" physicalName="Qualite" >
+   <remarks></remarks>
+   <folder id="FOLTAB161" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL17" populated="true" UUID="88b8b362-a2d0-4921-84fc-a04796bc05f1" autoIncrement="false" autoIncrementSequenceName="Qualite_qualite_seq" defaultValue="" name="qualite" nullable="0" physicalName="qualite" precision="10" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB163" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB162" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB164" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX18" populated="true" UUID="643a33a4-5c98-4474-bf39-bb7d71369504" clustered="false" name="Qualite_PK" physicalName="Qualite_PK" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB19" populated="true" UUID="ed594ce4-8062-41cd-8bec-e3061b92eee8" name="Version" objectType="TABLE" physicalName="Version" >
+   <remarks></remarks>
+   <folder id="FOLTAB191" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL20" populated="true" UUID="875a70a2-922b-4375-991a-854ab74d47ed" autoIncrement="false" autoIncrementSequenceName="Version_version_seq" defaultValue="" name="version" nullable="0" physicalName="version" precision="10" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB193" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB192" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB194" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX21" populated="true" UUID="d8f37781-afbd-49d0-b260-c02809954613" clustered="false" name="Version_PK" physicalName="Version_PK" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB22" populated="true" UUID="0467a4b4-88dc-4c87-b750-17acff65f763" name="Saison" objectType="TABLE" physicalName="Saison" >
+   <remarks></remarks>
+   <folder id="FOLTAB221" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL23" populated="true" UUID="c97c3e07-5d33-4e04-8a7b-b97ba0726033" autoIncrement="false" autoIncrementSequenceName="Saison_numSaison_seq" defaultValue="" name="numSaison" nullable="0" physicalName="numSaison" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL24" populated="true" UUID="bcc4a584-ce82-43c8-80fc-afeae7d53d66" autoIncrement="false" autoIncrementSequenceName="Saison_appellationSaison_seq" defaultValue="" name="appellationSaison" nullable="1" physicalName="appellationSaison" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB223" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB222" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB224" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX25" populated="true" UUID="87377d04-68b8-4182-89ae-60d2bbb7e5e9" clustered="false" name="Saison_pk" physicalName="Saison_pk" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB26" populated="true" UUID="7082a6a4-55b7-41b2-a2c9-187850d33ba5" name="Episode" objectType="TABLE" physicalName="Episode" >
+   <remarks></remarks>
+   <folder id="FOLTAB261" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL27" populated="true" UUID="24b4eb34-078f-47cd-bd1d-55855dbcb270" autoIncrement="false" autoIncrementSequenceName="Episode_nomEpisode_seq" defaultValue="" name="nomEpisode" nullable="0" physicalName="nomEpisode" precision="255" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL28" populated="true" UUID="b43b4460-636f-4b90-937b-6aec637b0d91" autoIncrement="false" autoIncrementSequenceName="Episode_numEpisode_seq" defaultValue="" name="numEpisode" nullable="0" physicalName="numEpisode" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB263" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB262" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB264" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX29" populated="true" UUID="0d637fda-c292-45c8-bd46-e04f0791d1de" clustered="false" name="Episode_PK" physicalName="Episode_PK" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC30" populated="true" UUID="747940ca-eb69-4ff7-b583-5b92ae1fe077" ascendingOrDescending="UNSPECIFIED" column-ref="COL27" name="nomEpisode" physicalName="nomEpisode" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB31" populated="true" UUID="239c4c10-8929-4546-8f9c-407bb3a4b5bb" name="TypeEpisode" objectType="TABLE" physicalName="TypeEpisode" >
+   <remarks></remarks>
+   <folder id="FOLTAB311" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL32" populated="true" UUID="131f72d5-205b-4d33-94b3-04c1c905c0cf" autoIncrement="false" autoIncrementSequenceName="TypeEpisode_typeEpisode_seq" defaultValue="" name="typeEpisode" nullable="1" physicalName="typeEpisode" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB313" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB312" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB314" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX33" populated="true" UUID="e5b44ad2-949c-4337-9f8d-e306b75d6d23" clustered="false" name="TypeEpisode_PK" physicalName="TypeEpisode_PK" primaryKeyIndex="true" unique="false" >
+    </index>
+   </folder>
+  </table>
   <relationships>
   </relationships>
  </target-database>
@@ -17,6 +177,15 @@
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="17" y="49" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB5" x="226" y="57" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB8" x="226" y="127" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB12" x="248" y="227" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB16" x="238" y="318" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB19" x="232" y="423" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB22" x="431" y="58" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB26" x="424" y="181" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB31" x="479" y="303" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">

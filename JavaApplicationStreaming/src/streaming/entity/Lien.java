@@ -13,6 +13,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -45,7 +47,9 @@ public class Lien implements Serializable {
     private Qualite qualite;
     @Column(nullable = false)
     private String lien;
-    
+    @ManyToOne
+    @JoinColumn(name = "film_id")
+    private Film film;
     
     public Long getId() {
         return id;

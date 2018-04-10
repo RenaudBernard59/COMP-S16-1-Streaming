@@ -31,7 +31,9 @@ public class Film implements Serializable {
     private String titre;   
     @Column(name = "Description", length = 4000)
     private String synopsis;
-
+    
+  
+    
     public String getTitre() {
         return titre;
     }

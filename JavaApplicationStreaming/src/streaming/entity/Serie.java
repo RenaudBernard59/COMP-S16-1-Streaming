@@ -6,11 +6,14 @@
 package streaming.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -28,6 +31,14 @@ public class Serie implements Serializable {
     @Column(name = "Description", length = 4000)
     private String synopsis;
     private Long paysSerie;
+    @Column(nullable = false)
+    private Integer numSaison;
+    @JoinColumn(name = "serie_id")
+    private Serie serie;
+    @OneToMany(mappedBy = "serie")
+    private List<Saison> saisons = new ArrayList<>();
+    
+    
     public Long getId() {
         return id;
     }

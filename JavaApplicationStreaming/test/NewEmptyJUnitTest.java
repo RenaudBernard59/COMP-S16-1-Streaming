@@ -22,14 +22,14 @@ public class NewEmptyJUnitTest {
     public void demarre() {
         
         EntityManagerFactory f = Persistence.createEntityManagerFactory("PU");
-        EntityManager em = f.createEntityManager();
-        em.getTransaction().begin();
-        Film film = new Film();
-        film.setTitre("Transpotting");
-        film.setDateSortie(new Date());
-        em.persist(film);
-        
-        em.getTransaction().commit();
+//        EntityManager em = f.createEntityManager();
+//        em.getTransaction().begin();
+//        Film film = new Film();
+//        film.setTitre("Transpotting");
+//        film.setDateSortie(new Date());
+//        em.persist(film);
+//        
+//        em.getTransaction().commit();
     }
     
 }

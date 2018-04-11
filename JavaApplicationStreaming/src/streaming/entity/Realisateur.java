@@ -6,10 +6,14 @@
 package streaming.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -23,6 +27,11 @@ public class Realisateur implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @ManyToOne
+    @JoinTable(name = "realisateurs")
+    private List<Film> film = new ArrayList<>();
+    private List<Serie> serie = new ArrayList<>();
+    
     public Long getId() {
         return id;
     }

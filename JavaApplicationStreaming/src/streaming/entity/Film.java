@@ -14,6 +14,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -37,6 +38,13 @@ public class Film implements Serializable {
     private String synopsis;
     @OneToMany(mappedBy = "film")
     private List<Lien> liens = new ArrayList<>();
+    
+    @ManyToOne
+    @JoinTable(name = "film")
+    private List<Acteur> acteur = new ArrayList<>();
+    private List<Realisateur> realisateur = new ArrayList<>();
+    
+    
     
     public String getTitre() {
         return titre;

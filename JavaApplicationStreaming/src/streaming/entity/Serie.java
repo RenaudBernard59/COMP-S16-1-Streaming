@@ -14,6 +14,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
@@ -39,6 +41,10 @@ public class Serie implements Serializable {
     @OneToMany(mappedBy = "serie")
     private List<Saison> saisons = new ArrayList<>();
     
+    @ManyToOne
+    @JoinTable(name = "serie")
+    private List<Acteur> acteur = new ArrayList<>();
+    private List<Realisateur> realisateur = new ArrayList<>();
     
     public Long getId() {
         return id;

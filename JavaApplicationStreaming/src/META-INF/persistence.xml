@@ -7,7 +7,6 @@
     <class>streaming.entity.Genre</class>
     <class>streaming.entity.Lien</class>
     <class>streaming.entity.Pays</class>
-    <class>streaming.entity.Personne</class>
     <class>streaming.entity.Saison</class>
     <class>streaming.entity.Serie</class>
     <class>streaming.entity.TypeEpiosode</class>
